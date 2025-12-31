@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+ 
+{% block title %}
+    Books List
+{% endblock %}
+
+
+{% block content %}
+    <div class="cards">
+    {% for book in books %}
+        <div class="book" >
+            <h3> {{book.title}} </h3>
+            <p> Authored By:  {{book.author}} </p>
+            <p> ISBN:  {{book.isbn}} </p>
+            <p> Description:  {{book.description}} </p>
+            <p> Shelf:  {{book.shelf.label}} </p>
+            <p> Library: {{book.shelf.library.name}} </p>
+            <a href="{% url 'book.details' pk=book.id %}" class="btn btn-primary"> View {{book.title}} </a>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Libraries List
+{% endblock %}
+
+
+{% block content %}
+    <div class="cards">
+    {% for library in libraries %}
+        <div class ="library">
+            <h1> {{library.name}} </h1>
+            <p> Students Capacity: {{library.students_capacity}} </p>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

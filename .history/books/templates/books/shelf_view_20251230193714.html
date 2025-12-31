@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+ 
+{% block title %}
+    Shelves List
+{% endblock %}
+
+
+{% block content %}
+    <div class="cards">
+    {% for shelf in shelves %}
+        <div class="shelf">
+            <h3> {{shelf.label}} </h3>
+            <p> Number of Books:  {{shelf.books_capacity}} </p>
+            <p> Library:  {{shelf.library.name}} </p>
+            <p> Created On {{shelf.created_on}} </p>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

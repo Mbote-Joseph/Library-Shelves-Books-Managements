@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Libraries List
+{% endblock %}
+
+
+{% block content %}
+    {% for library in libraries %}
+        <span class ="library"> {{library}} </span>
+    {% endfor %}
+{% endblock %}

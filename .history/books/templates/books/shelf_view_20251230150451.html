@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+ 
+{% block title %}
+    Shelves List
+{% endblock %}
+
+
+{% block content %}
+    {% for shelf in shelves %}
+        <p> {{shelf}} </p>
+    {% endfor %}
+{% endblock %}

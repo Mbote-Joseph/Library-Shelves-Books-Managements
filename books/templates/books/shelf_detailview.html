@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{shelf.name}}
+{% endblock %}
+
+
+{% block content %}
+        <div class="shelf">
+            <h3> {{shelf.label}} </h3>
+            <p> Number of Books:  {{shelf.books_capacity}} </p>
+            <p> Library:  {{shelf.library.name}} </p>
+            <p> Created On {{shelf.created_on}} </p>
+            <a class="btn btn-primary" href="{% url 'shelves' %}"> back  </a>
+        </div>
+{% endblock %}

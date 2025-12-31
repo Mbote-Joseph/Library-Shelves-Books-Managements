@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Libraries List
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+
+        <div class="cards">
+        {% for library in libraries %}
+            <div class ="library">
+                <h3> {{library.name}} </h3>
+                <p> Students Capacity: {{library.students_capacity}} </p>
+                <p> Location: {{library.location}} </p>
+                <p> Created on: {{library.created_on}} </p>
+                <a class="btn btn-primary" href="{% url 'library.details' library.id %}"> View {{library.name}}  </a>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

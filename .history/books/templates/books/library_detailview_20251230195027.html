@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{library.name}}
+{% endblock %}
+
+
+{% block content %}
+        <div class ="library">
+            <h3> {{library.name}} </h3>
+            <p> Students Capacity: {{library.students_capacity}} </p>
+            <p> Location: {{library.location}} </p>
+            <p> Created on: {{library.created_on}} </p>
+            <a class="btn btn-primary" href="{% url 'libraries' %}"> back  </a>
+        </div>
+{% endblock %}
