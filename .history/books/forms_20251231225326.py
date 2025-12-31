@@ -23,7 +23,7 @@ class ShelfForm(forms.ModelForm):
         widgets = {
             'label': forms.TextInput(attrs={"class": "form-control my-1", "placeholder": "Shelf Label"}),
             'books_capacity': forms.TextInput(attrs={"class": "form-control my-1", "placeholder": "Total Books Capacity"}),
-            'library': forms.Select(attrs={"class": "form-control my-1", "placeholder":"Shelf Library"})
+            'library': forms.TextInput(attrs={"class": "form-control my-1", "placeholder":"Shelf Library"})
         }
         labels = {
             'label': 'Shelf label',
