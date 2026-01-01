@@ -18,9 +18,7 @@
         {% if shelves %}
             <h3> Shelves Constructed in {{library.name}} </h3>
             {% for shelf in shelves %}
-            <p> {{shelf.label}} </p>
-
-            <a href="{% url 'shelf.details' shelf.id %}" class="btn btn-success"> View {{shelf.label}} </a>
+            <p> {{shelf.label}}
 
             {% endfor %}
         {% else %}

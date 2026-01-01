@@ -19,7 +19,7 @@
         <h3> Books in the {{shelf.label}} Shelf of {{shelf.library.name }} Library </h3>
             {% for book in books %}
             <p> {{book.title}} </p>
-                <a href="{% url 'book.details' book.id %}" class="btn btn-success"> View {{book.title}} </a>
+
             {% endfor %}
 
         {% else %}

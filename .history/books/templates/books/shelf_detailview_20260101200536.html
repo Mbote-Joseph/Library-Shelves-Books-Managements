@@ -16,14 +16,14 @@
         </div>
 
         {% if books %}
-        <h3> Books in the {{shelf.label}} Shelf of {{shelf.library.name }} Library </h3>
+        <h3> Books in the {{shelf.label}} Shelf of {{shelf.library.name }} </h3>
             {% for book in books %}
             <p> {{book.title}} </p>
-                <a href="{% url 'book.details' book.id %}" class="btn btn-success"> View {{book.title}} </a>
+
             {% endfor %}
 
         {% else %}
-            <p> No books in the {{shelf.label }} of {{shelf.library.name}} </p>
+            <p> No books </p>
         {% endif %}
 
 </div>
