@@ -4,9 +4,8 @@
     {{library.name}}
 {% endblock %}
 
-{% block content %}
-<div class="container">
 
+{% block content %}
         <div class ="library">
             <h3> {{library.name}} </h3>
             <p> Students Capacity: {{library.students_capacity}} </p>
@@ -20,6 +19,4 @@
         <p> {{shelf.label}}
 
         {% endfor %}
-
-</div>
 {% endblock %}

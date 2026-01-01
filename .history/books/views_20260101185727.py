@@ -30,11 +30,6 @@ class LibraryDetailView(DetailView):
     context_object_name = 'library'
     template_name = "books/library_detailview.html"
     
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['shelves'] = self.object.shelves.all()
-        return context
-    
 class ShelfDetailView(DetailView):
     model = Shelf
     context_object_name = 'shelf'
@@ -66,7 +61,5 @@ class BookCreate(CreateView):
     model = Book
     form_class = BookForm
     context_object_name = 'book'
-    http_method_names = ['get', 'post', 'put', 'patch', 'delete', 'head', 'options', 'trace']
     template_name = 'books/book_form.html'
     success_url = 'book'
-    
