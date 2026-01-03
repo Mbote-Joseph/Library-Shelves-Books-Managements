@@ -14,7 +14,15 @@
             <p> Created on: {{library.created_on}} </p>
             <a class="btn btn-primary" href="{% url 'libraries' %}"> back  </a>
         </div>
-        
+
+        <h3>Add Shelf to {{ library.name }}</h3>
+
+            <form method="POST" class="mb-4">
+            {% csrf_token %}
+            {{ shelf_form.as_p }}
+            <button class="btn btn-primary" type="submit">Add Shelf</button>
+            </form>
+
 
         {% if shelves %}
             <h3> Shelves Constructed in {{library.name}} </h3>
